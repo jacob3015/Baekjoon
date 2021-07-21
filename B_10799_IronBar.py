@@ -23,11 +23,11 @@ Output:
 def solution():
     """주어진 괄호 표현에서 잘려진 쇠막대기의 총 개수를 구해 출력한다.
     Extra explanation:
-        Stack을 이용하며, ')'가 레이저일 때와 쇠막대기 끝지점일 때를 구분해 잘려진 쇠막대기 개수를 결과에 더해준다.
+        Stack을 이용하며, ')'가 레이저일 때와 쇠막대기 끝지점일 때를 구분해 잘려진 쇠막대기 개수를 결과에 더한다.
     
     Variables:
         parentheses : 주어진 괄호 표현
-        stack : 잘려진 쇠막대기 개수를 세기 위한 list로 구현한 stack
+        stack : 잘려진 쇠막대기 개수를 세기 위해 list로 구현한 stack
         laser : ')'가 레이저일 때와 쇠막대기 끝지점일 때를 구분 짓기 위한 boolean type variable
         result : 총 잘려진 쇠막대기 개수
     
