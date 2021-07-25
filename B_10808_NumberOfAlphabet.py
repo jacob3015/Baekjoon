@@ -12,10 +12,24 @@ Output:
 """
 
 def solution():
+    """주어진 단어 S에 포함된 알파벳 소문자의 개수를 구해 출력한다.
+    Extra explanation:
+        Counter sort를 활용해 주어진 단어에 포함된 알파벳 소문자의 개수를 구한다.
+
+    Variables:
+        S : 주어진 단어
+        alphabet : 알파벳 소문자의 개수 list
+    
+    Example:
+        >>> baekjoon                                            : input S
+        >>> 1 1 0 0 1 0 0 0 0 1 1 0 0 1 2 0 0 0 0 0 0 0 0 0 0 0 : output result
+    """
     S = input()
     alphabet = [0 for _ in range(26)]
+
     for s in S:
         alphabet[ord(s)-97] += 1
+        
     for alpha in alphabet:
         print(alpha, end=' ')
 
