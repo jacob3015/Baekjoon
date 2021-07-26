@@ -11,9 +11,13 @@ Input:
 Output:
     첫째 줄에 S를 ROT13으로 암호화한 내용을 출력한다.
 """
+import string
 
 def solution():
     """주어진 문자열을 ROT13으로 암호화한 뒤 결과를 출력한다.
+    Extra explanation:
+        String module의 ascii_uppercase와 ascii_lowercase를 활용해 대문자 알파벳 list와 소문자 알파벳 list를 구현한다.
+        주어진 문자열의 문자에 맞게 ROT13으로 암화화 한다.
     
     Variables:
         string : 주어진 문자열
@@ -25,16 +29,16 @@ def solution():
         >>> Baekjoon Problem 11655  : input string
         >>> Onrxwbba Ceboyrz 11655  : output result
     """
-    string = input()
-    upper = [chr(alpha) for alpha in range(65, 91)] * 2
-    lower = [chr(alpha) for alpha in range(97, 123)] * 2
+    input_string = input()
+    upper = list(string.ascii_uppercase) * 2
+    lower = list(string.ascii_lowercase) * 2
     result = ''
 
-    for str in string:
-        if str.islower():
-            result += lower[ord(str) - 97 + 13]
-        elif str.isupper():
+    for str in input_string:
+        if str.isupper():
             result += upper[ord(str) - 65 + 13]
+        elif str.islower():
+            result += lower[ord(str) - 97 + 13]
         else:
             result += str
             
