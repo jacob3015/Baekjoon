@@ -41,6 +41,7 @@ def solution():
     N = int(input())
     command = [input() for _ in range(N)]
     stack = []
+    
     for com in command:
         if len(com) > 5:
             stack.append(int(com[5:]))
